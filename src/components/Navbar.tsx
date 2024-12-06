@@ -4,7 +4,7 @@ import headerLinks from '@/lib/data'
 function Navbar() {
   return (
     <nav>
-    <div className='w-full bg-white shadow-md py-4 md:py-6 px-5 md:px-32 flex justify-between'>
+    <div className='w-full bg-white shadow-md py-5 md:py-6 px-5 md:px-32 flex justify-between'>
         <div className='logo'>
             <span className='font-bold text-base md:text-3xl text-logo'>Three J Rental Motor</span>
         </div>
