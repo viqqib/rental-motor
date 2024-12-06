@@ -1,8 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import background from "../../public/images/jepretualang-stN5xuXLde4-unsplash.jpg"
 import Hero from "../components/section/Hero"
-import heroImg from '../../public/images/hero.png'
 import BikeCard from "@/components/BikeCard";
 import Footer from "@/components/Footer";
 
