@@ -54,7 +54,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className="absolute md:-right-[10px] md:top-0 top-[350px] flex-nowrap flex">
+          <div className="absolute md:-right-[10px] md:top-0 top-[350px] -z-10 flex-nowrap flex">
               <Image
                 src={heroImg}
                 width={900}
