@@ -1,0 +1,38 @@
+project-root/
+├── public/                 # Static files (images, icons, fonts)
+│   ├── images/             # Motorbike images, logo, etc.
+│   └── favicon.ico         # Website favicon
+├── src/
+│   ├── app/                # Application pages (Next.js App Router)
+│   │   ├── layout.tsx      # Root layout for your app
+│   │   ├── page.tsx        # Homepage
+│   │   ├── motorbikes/     # Motorbike-specific pages
+│   │   │   ├── page.tsx    # List of motorbikes
+│   │   │   ├── [id]/       # Dynamic route for motorbike details
+│   │   │   │   └── page.tsx
+│   │   ├── rentals/        # Rentals management
+│   │   │   ├── page.tsx    # Rental list page
+│   │   │   └── [id]/       # Rental details or booking page
+│   │   │       └── page.tsx
+│   │   └── about/          # About the company
+│   │       └── page.tsx
+│   ├── api/                # API routes for backend logic
+│   │   ├── motorbikes.ts   # Fetch motorbike data
+│   │   └── rentals.ts      # Manage rentals
+│   ├── components/         # Reusable UI components
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Card.tsx        # Motorbike display card
+│   │   ├── Modal.tsx       # Popup for booking confirmation
+│   │   └── Form.tsx        # Forms for user input
+│   ├── hooks/              # Custom React hooks
+│   ├── styles/             # CSS or Tailwind files
+│   │   └── globals.css     # Global styles
+│   ├── utils/              # Utility functions (e.g., formatting dates)
+│   └── lib/                # Database or third-party service integrations
+│       └── db.ts           # Database connection or ORM setup
+├── .env                    # Environment variables (API keys, database credentials)
+├── .gitignore              # Files to ignore in Git
+├── next.config.js          # Next.js configuration
+├── package.json            # Project dependencies
+└── tsconfig.json           # TypeScript configuration (if using TypeScript)

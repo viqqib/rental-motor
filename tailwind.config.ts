@@ -11,6 +11,15 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        logo: "#FF4400",
+        primary: '#373737',
+        bgone: '#F5F5F5',
+        footer: '#FF5B22',
+
+      },
+      fontFamily: {
+        sans: 'var(--font-sans)',
+        serif: 'var(--font-serif)', // Fixed this line
       },
     },
   },
