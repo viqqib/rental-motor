@@ -1,18 +1,27 @@
-import Navbar from "@/components/Navbar";
+'use client'
 import Hero from "../components/section/Hero"
 import BikeCard from "@/components/BikeCard";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
+
 
 export default function Home() {
+
+const router = useRouter();
+
   return (
     <div className="">
-      <Navbar/>
+
+      <div className="px-4 md:px-52">
+    
+
+  
+
+
+      </div>
 
      {/* Hero Page */}
      <Hero />
-      
-
-    {/* Bike Page */}
       <div className="mx-auto  md:pt-1 px-5 pt-1 md:px-1 lg:px-24 pb-10">
         <div className="flex w-full flex-col items-center justify-center">
           <p className="text-logo font-bold md:text-base text-xs">MOTOR TERBAIK</p>
@@ -27,7 +36,9 @@ export default function Home() {
             <BikeCard />
           </div>
 
-          <button className=" border-logo hover:bg-logo hover:text-white duration-200 font-bold rounded-md py-2 text-logo border-2 px-10 bg-bgone mt-5">CEK SEMUA MOTOR </button>
+          <button className=" border-logo hover:bg-logo hover:text-white duration-200 font-bold rounded-md py-2 text-logo border-2 px-10 bg-bgone mt-5"
+          onClick={() => router.push("/motor")}
+          >CEK SEMUA MOTOR </button>
               
         </div>
       </div> 

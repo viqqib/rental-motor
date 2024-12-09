@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Montserrat,Bree_Serif } from 'next/font/google';
 import { twMerge } from "tailwind-merge";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-
+import Navbar from "@/components/Navbar";
 const montserrat = Montserrat({
   subsets:['latin'],
   variable: "--font-sans",
@@ -35,6 +34,7 @@ export default function RootLayout({
       <body
         className={twMerge(montserrat.variable,breeSerif.variable,"font-sans antialiased bg-bgone text-primary")}
       >
+        <Navbar />
         {children}
       </body>
     </html>
