@@ -13,7 +13,7 @@ export default function Bike() {
                 <p className='text-base md:text-2xl font-semibold'>Tersedia untuk disewa</p>
 
                 <div className='bike-bar'>
-                    <input className='md:block hidden search-bar bg-white rounded-lg px-3 w-64 py-3 ' placeholder='Cari Motor' type='text' style={{ boxShadow : "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" }}/>                        
+                    <input className='md:block hidden search-bar bg-white rounded-lg px-3 w-64 py-3 ' placeholder='Cari Motor' type='text' style={{ boxShadow : "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset" }}/>                        
                 </div>
             </div>
 
