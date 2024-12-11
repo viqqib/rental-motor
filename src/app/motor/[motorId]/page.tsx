@@ -1,3 +1,4 @@
+'use client'
 import motors from "@/lib/motor"; // Import your motor data
 import Image from "next/image";
 
@@ -18,9 +19,17 @@ export default function MotorDetails({
     );
   }
 
+  const whatsappUrl = `https://wa.me/6289627728613?text=saya%20ingin%20merental%20motor%20${encodeURIComponent(
+    motor.merek
+  )}%20${encodeURIComponent(motor.tipe)}`;
+
+  const handleRentalClick = () => {
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="px-5 md:px-32 py-7 flex flex-col w-full">
-      <div className="w-full bg-white flex p-5">
+      <div className="w-full bg-white flex flex-col md:flex-row md:p-5 p-3">
         {/* Bike Image */}
         <div className="bike-img">
           <Image
@@ -30,12 +39,12 @@ export default function MotorDetails({
             alt={motor.tipe}
             width={500}
             height={500}
-            className="w-[680px] h-[470px] rounded-md"
+            className="md:w-[680px] md:h-[470px] w-full h-[260px] rounded-md"
           />
         </div>
 
         {/* Bike Description */}
-        <div className="bike-desc ml-10">
+        <div className="bike-desc md:ml-10 mt-5 md:mt-0">
           <h1 className="text-xl font-bold md:text-3xl">{motor.merek}{motor.tipe}</h1>
 
           <table className="mt-5 w-full text-left">
@@ -71,7 +80,7 @@ export default function MotorDetails({
           <p className="mt-2">{motor.deskripsi}</p>
 
           <h1 className="text-logo text-3xl font-bold mt-3">
-            Rp {Number(motor.harga).toLocaleString("id-ID")}
+            Rp {Number(motor.harga).toLocaleString("id-ID")} <span className="text-lg text-gray-500">/ 12 Jam</span>
           </h1>
 
           <button
@@ -81,6 +90,7 @@ export default function MotorDetails({
                 : "bg-gray-400 cursor-not-allowed"
             } text-white font-bold rounded-md py-3 text-lg mt-5`}
             disabled={motor.status !== "tersedia"}
+            onClick={handleRentalClick}
           >
             {motor.status === "tersedia" ? "Rental Sekarang" : "Tidak Tersedia"}
           </button>
