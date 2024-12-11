@@ -1,13 +1,12 @@
-import { Metadata } from "next";
 import motors from "@/lib/motor";
 import Image from "next/image";
 
-export default function MotorDetails({
-  params,
-}: {
+// Define the params correctly to avoid the type error
+interface MotorDetailsProps {
   params: { motorId: string };
-}) {
-  // Find motor based on motorId from params
+}
+
+export default function MotorDetails({ params }: MotorDetailsProps) {
   const motor = motors.find((m) => m.id.toString() === params.motorId);
 
   if (!motor) {
@@ -76,19 +75,4 @@ export default function MotorDetails({
       </div>
     </div>
   );
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { motorId: string };
-}): Promise<Metadata> {
-  const motor = motors.find((m) => m.id.toString() === params.motorId);
-  if (!motor) {
-    return { title: "Motor not found" };
-  }
-  return {
-    title: `${motor.merek} ${motor.tipe}`,
-    description: motor.deskripsi,
-  };
 }
