@@ -30,6 +30,7 @@ function Motor() {
               merek={motor.merek}
               link={`/motor/${motor.id}`} 
               harga={motor.harga}
+              status='tersedia'
             />
           ))}
   
